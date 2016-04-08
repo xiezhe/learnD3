@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>d3.js</title>
+	<style type="text/css">
+		.red{background-color: #f00;}
+		.bigsize{width: 100px;}
+		.blue{background-color: #00f;}
+		.smallsize{height: 300px;}
+	</style>
+	<script type="text/javascript" src="js/d3.min.js"></script>
+</head>
+<body>
+	<p>this is a paragraph</p>
+	<div>
+		
+	</div>
+	<input type="text" id="fname" name="fullname">
+	<script type="text/javascript">
+		var oDiv = d3.select('div');
+		oDiv.append('svg').append("circle")
+		.attr("cx","50px")
+		.attr("cy","50px")
+		.attr("r","50px")
+		.attr("fill","red");
+		//d3.select("p").attr("class","red bigsize")//设置多个类是有缺点的
+		d3.select("p")
+		.classed("red",true)
+		.classed("bigsize",true)
+		d3.select("p")
+		.classed({
+			"blue":true
+		})
+		.classed("bule smallsize",true)
+		d3.select("p")
+		.style("color","#f0f")
+		.style({"font-weight":"bold"})
+		d3.select("#fname").property("value","xiezhe")
+	</script>
+</body>
+</html>
