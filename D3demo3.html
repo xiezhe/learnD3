@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>D3demo3</title>
+</head>
+<body>
+	<p>fire</p>
+	<p>water</p>
+	<p>wind</p>
+	<script type="text/javascript" src="js/d3.min.js"></script>
+	<script type="text/javascript">
+		var p = d3.select('body').selectAll('p');
+		//p.datum(10);
+		//console.log(p)
+		/*p.datum('d3').text(function(d,i){
+			//d表示datum,i表示index索引
+			return d + ' ' + i;
+		})*/
+		p.datum('d3')
+		.append('span')
+		.text(function(d,i){
+			return ' '+ d;
+		})
+		console.log(p)
+	</script>
+</body>
+</html>
